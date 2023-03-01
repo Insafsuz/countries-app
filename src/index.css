@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --fontFamily: 'Nunito Sans', sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body[data-theme='dark'] {
+  --text-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(207, 26%, 17%);
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+  --ui-color: hsl(209, 23%, 22%);
+}
+
+body[data-theme='light'] {
+  --text-color: hsl(200, 15%, 8%);
+  --bg-color: hsl(0, 0%, 98%);
+  --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  --ui-color: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: var(--fontFamily);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
