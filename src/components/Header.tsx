@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1`
-  font-weight: 600;
+  font-weight: 800;
 `
 
 const ThemeIcon = styled.div`
@@ -25,7 +25,7 @@ const ThemeIcon = styled.div`
   user-select: none;
   cursor: pointer;
   span {
-    margin-left: 10px;
+    margin-left: 15px;
     text-transform: capitalize;
   }
 `
