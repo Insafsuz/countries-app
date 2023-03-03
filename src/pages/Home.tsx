@@ -7,6 +7,7 @@ import List from '../components/List'
 import { Container } from '../components/Container'
 import { CustomSelect } from '../components/CustomSelect'
 import axios from 'axios'
+import { ICountry } from '../types/types'
 
 const Menu = styled.div`
   display: flex;
@@ -46,16 +47,14 @@ const Home: React.FC = () => {
     { value: 'Oceania', label: 'Oceania' },
   ]
 
-  const [countries, setCountries] = useState([])
-
-  console.log(countries)
+  const [countries, setCountries] = useState<ICountry[]>([])
 
   const fetchCountries = async () => {
     try {
-      const res = await axios.get(
+      const { data } = await axios.get(
         'https://restcountries.com/v2/all?fields=name,capital,flags,population,region,alpha3Code'
       )
-      setCountries(res.data)
+      setCountries(data)
     } catch (error) {
       console.log(error)
     }
@@ -76,9 +75,9 @@ const Home: React.FC = () => {
           <CustomSelect options={options} placeholder='Filter by Region' />
         </Menu>
         <List>
-          {countries.map((country, i) => (
-            <Card key={i} country={country} />
-          ))}
+          {countries.map(country => {
+            return <Card key={country.name} country={country} />
+          })}
         </List>
       </Container>
     </>

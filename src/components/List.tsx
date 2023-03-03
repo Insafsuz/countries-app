@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 4rem;
 `
 
 interface ListProps {

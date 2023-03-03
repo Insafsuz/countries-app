@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Container } from './Container'
 import { FiMoon, FiSun } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const HeaderEl = styled.header`
   padding: 28px 0;
@@ -45,7 +46,9 @@ const Header: React.FC = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title>Where is the world?</Title>
+          <Link to='/'>
+            <Title>Where is the world?</Title>
+          </Link>
           <ThemeIcon onClick={toggleTheme}>
             {theme === 'dark' ? <FiMoon size={22} /> : <FiSun size={22} />}
             <span>{theme} Theme</span>
